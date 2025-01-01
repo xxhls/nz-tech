@@ -1,9 +1,10 @@
 import * as path from 'node:path';
 import { defineConfig } from 'rspress/config';
+import { pluginNodePolyfill } from '@rsbuild/plugin-node-polyfill';
 
 export default defineConfig({
   base: '/nz-tech/',
-  root: path.join(__dirname, 'docs'),
+  root: path.join(__dirname,),
   title: 'My Site',
   icon: '/rspress-icon.png',
   logo: {
@@ -19,4 +20,5 @@ export default defineConfig({
       },
     ],
   },
+  builderPlugins: [pluginNodePolyfill()]
 });

@@ -5,12 +5,9 @@
   "scripts": {
     "check": "biome check --write",
     "format": "biome format --write",
-    "docs:dev": "rspress dev",
-    "docs:build": "rspress build",
-    "docs:preview": "rspress preview"
-  },
-  "dependencies": {
-    "rspress": "^1.38.0"
+    "docs:dev": "pnpm --filter docs run dev",
+    "docs:build": "pnpm --filter docs run build",
+    "docs:preview": "pnpm --filter docs run preview"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
